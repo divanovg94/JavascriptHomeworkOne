@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Playtech Robot</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header id="header">
+    <h1>ROBOT FACTORY</h1>
+    <img src="images/playtech-logo.jpg" alt="Logo">
+</header>
+
+<section id="slide-1" class="factory-section">
+    <div class="basic-robot-wrapper">
+        <div class="basic-robot-header">
+            <h1>Basic Robot</h1>
+        </div>  
+        <div class="top-line"></div>
+        <div class="bottom-line"></div>
+    </div>
+    <div class="content-wrapper">
+        <div class="robot">
+            <div class="robot-head">
+                <div class="left-eye"></div>
+                <div class="right-eye"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="robot-left-hand"></div>
+            <div class="robot-body"></div>
+            <div class="robot-right-hand"></div>
+            <div class="robot-left-leg"></div>
+            <div class="robot-right-leg"></div>
+            
+            <div class="robot-name"><h1>Robot name</h1></div>
+
+        </div>
+        <div class="div-paragraph" id="div-paragraph-one"><p class="paragraph" id="paragraph-one" ><b>P</b>aragraph text here. Text-align on left 3% space from right border.Text is only 2 lines and ends with three dots...<span class="tooltip">because it too long. On hover full text is shown as tooltip.First letter is bold.</span></p></div>
+        <div class="div-paragraph" id="div-paragraph-two"><p class="paragraph" id="paragraph-two"><span class="word-italic">Paragraph</span> text here. Text justified,6% space from right border. Text is only 2 lines and ends with three dots..<span class="text-show-on-hover">because it too long. On hover full text is shown.First word is italic.</span></p></div>
+        <div class="div-paragraph" id="div-paragraph-three"><img src="images/good-luck.jpg" alt="Good Luck" ><p class="paragraph" id="paragraph-three">Paragraph text here. Text-align on left, 9% from right border. Image on left side.</p></div>
+    </div>
+</section>
+<section id="slide-2" class="create-robot-section">
+    <div class="create-robot"><h>Create Robot</h>
+    </div>
+    
+        <form>
+            <div class="robot-form">
+                <div class="form-name">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" value="Robot name"><br>
+                </div>  
+                <div class="form-select-type">
+                    <label for="cars">Select type</label><br>
+                    <select name="cars" id="cars" form="robot">
+                    <option value="volvo">Basic Robot</option>
+                    </select>
+                </div>
+                <div class="form-select-color">
+                    <label for="head">Select Color</label><br>
+                    <input type="color" id="head" name="head"
+                        value="#ff8000">
+                
+                </div>
+                <div class="form-select-options" >
+                    <label for="head">Select Options</label>
+                
+                    <input type="checkbox" class="checkbox" id="can-jump" name="robot-options" value="can-jump">
+                      <label for="can-jump">can jump</label>
+                      <input type="checkbox"  class="checkbox" id="can-talk" name="robot-options" value="can-talk">
+                      <label for="can-talk">can talk</label>
+                      <input type="checkbox"  class="checkbox" id="can-blink" name="robot-options" value="can-blink">
+                      <label for="can-blink">can blink</label>
+                </div>
+                
+                <div class="form-write-comments">
+                    <label for="head">Write Comments</label>
+                    <textarea rows="4"  name="comment" ></textarea>
+                </div>
+                <div class="form-submit-button">
+                    <input  type="submit" value="Create"> 
+                </div>
+                <div class="form-show-create-robot-button" id="id-form-show-create-robot-button">
+                    <button  type="button">Show Created Robot</button>
+                </div>
+                
+            </div>
+        </form>
+   
+
+</section>
+</body>
+</html>

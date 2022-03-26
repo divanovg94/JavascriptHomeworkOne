@@ -1,0 +1,522 @@
+*{
+  font-family: serif;
+  font-size:16px;
+}
+body{
+  margin: auto;
+  width:1000px;
+}
+header{
+ display:flex;
+ justify-content:space-between;
+}
+header > h1 {
+  color: #002699;
+  font-size: 32px;
+}
+header > img{
+  width:auto;
+  height:80px;
+}
+#slide-1{
+  width:100%;
+  background-color:#ffffcc;
+  border: 2px solid grey;
+}
+.basic-robot-wrapper{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  height:50px;
+  flex-wrap: wrap;
+}
+
+.basic-robot-header{
+  width:calc(3% + 384px);
+  height:50px;
+  border-bottom:2px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.basic-robot-header > h1{
+  font-size:24px;
+  width:100%;
+  padding:0px;
+  text-align: center;
+  margin:auto;
+  
+}
+.top-line{
+width:calc(97% - 382px);
+height:25px;
+border-left:2px solid grey;
+transform: skewX(-45deg);
+margin-left: -20px;
+
+}
+.bottom-line{
+  width:calc(97% - 380px);
+  height:25px;
+  border-left:2px solid grey;
+  transform: skewX(+45deg);
+  margin-left: -20px;
+}
+
+.content-wrapper{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  height: 504px;
+  flex-wrap: wrap;
+ 
+
+}
+.robot{
+  width:380px;
+  height:380px;
+  border: 2px solid grey;
+  background-color: white;
+  margin:50px 3% 50px 3%;
+  position:relative;
+}
+.div-paragraph{
+  
+  /* max-width:calc(100% - 524px); */
+  border: 2px solid grey;
+  background-color: white;
+
+
+}
+.div-paragraph > p {
+ margin:10px;
+}
+
+#div-paragraph-one{
+ margin: 50px 3% 10px 3%;
+ width:calc(88% - 388px);
+ height:160px;
+ text-align: left;
+}
+#div-paragraph-two{
+  margin: 0px 6% 10px 3%;
+  width:calc(85% - 388px);
+  height:120px;
+  text-align: justify;
+}
+.word-italic{
+  font-style: italic;
+}
+#div-paragraph-three{
+  margin: 0px 9% 50px 3%;
+  width:calc(82% - 388px);
+  height:72px;
+  text-align: left;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+
+}
+#div-paragraph-three > p{
+  width:calc(100% - 120px);
+}
+.div-paragraph > img {
+  width:100px;
+  max-height:72px;
+}
+#paragraph-one {
+  
+  opacity:0;
+ 
+  animation: paragraph-one-fade 1s linear 0s 1 normal forwards;
+  transform: scale(1);
+ 
+}
+@keyframes paragraph-one-fade {
+  0% {opacity:0;
+}
+  100% {opacity:1;}
+
+}
+
+#paragraph-one .tooltip{
+  visibility: hidden;
+  width: 120px;
+  text-align: center;
+  padding: 5px 0;
+  border:2px solid grey;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+#paragraph-one:hover .tooltip{
+  visibility: visible;
+}
+ #paragraph-two {
+  
+
+  
+  opacity:0;
+ 
+  animation: paragraph-two-fade 1s linear 2s 1 normal forwards;
+  transform: scale(1);
+ 
+}
+@keyframes paragraph-two-fade {
+  0% {opacity:0;
+}
+  100% {opacity:1;}
+
+}
+
+
+.text-show-on-hover{
+  visibility: hidden;
+}
+#paragraph-two:hover .text-show-on-hover{
+  visibility: visible;
+}
+#paragraph-three {
+  
+
+  
+  opacity:0;
+ 
+  animation: paragraph-three-fade 1s linear 4s 1 normal forwards;
+  transform: scale(1);
+ 
+}
+@keyframes paragraph-three-fade {
+  0% {opacity:0;
+}
+  100% {opacity:1;}
+
+}
+.robot-head{
+  position: absolute;
+  left: 158px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  border: 2px solid grey;
+  animation: head-jump 4s infinite;
+  transform: scale(1);
+ 
+}
+@keyframes head-jump {
+  0% {top: 20px;
+    }
+  25% {top:10px;}
+
+  50% {top:20px;}
+
+
+}
+.left-eye{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 50%;
+  border: 2px solid grey;
+}
+.right-eye{
+  position: absolute;
+  left: 36px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 50%;
+  border: 2px solid grey;
+  animation: blink 4s infinite;
+  transform: scale(1);
+}
+@keyframes blink {
+  0% {height: 10px;
+    }
+  25% {height:2.5px;}
+
+  50% {height:10px;}
+
+
+}
+.mouth{
+  position: absolute;
+  left: 18px;
+  top: 35px;
+  width: 20px;
+  height: 5px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 50%;
+  border: 2px solid grey;
+  animation-name: speak;
+  /* animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite; */
+  /* animation-duration: 1s;
+  -webkit-animation-duration: 1s; */
+  animation: speak 4s infinite;
+  transform: scale(1);
+
+ 
+ 
+}
+@keyframes speak {
+  0% {height: 5px;
+    }
+  25% {height:20px;}
+
+  50% {height:5px;}
+
+
+}
+.robot-left-hand{
+  position: absolute;
+  left: 90px;
+  top: 86px;
+  width: 20px;
+  height: 120px;
+
+  border: 2px solid grey;
+  border-radius: 5px;
+  animation: left-hand-jump 4s infinite;
+  transform: scale(1);
+}
+@keyframes left-hand-jump {
+  0% {top: 86px;
+    }
+  25% {top:76px;}
+
+  50% {top:86px;}
+
+
+}
+
+.robot-body {
+  position: absolute;
+  left: 115px;
+  top: 86px;
+  border-top: 150px solid #ff8000;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 100px;
+  animation: body-jump 4s infinite;
+  transform: scale(1);
+}
+@keyframes body-jump {
+  0% {top: 86px;
+    }
+  25% {top:76px;}
+
+  50% {top:86px;}
+
+
+}
+.robot-right-hand{
+  position: absolute;
+  left: 266px;
+  top: 86px;
+  width: 20px;
+  height: 120px;
+
+  border: 2px solid grey;
+  border-radius: 5px;
+  animation: right-hand-jump 4s infinite;
+  transform: scale(1);
+}
+@keyframes right-hand-jump {
+  0% {top: 86px;
+    }
+  25% {top:76px;}
+
+  50% {top:86px;}
+
+
+}
+.robot-left-leg{
+  position: absolute;
+  left: 140px;
+  top: 236px;
+  width: 20px;
+  height: 80px;
+
+  border: 2px solid grey;
+  animation: left-leg-jump 4s infinite;
+  transform: scale(1);
+
+}
+@keyframes left-leg-jump {
+  0% {top: 236px;
+    }
+  25% {top:226px;}
+
+  50% {top:236px;}
+
+
+}
+.robot-right-leg{
+  position: absolute;
+  left: 216px;
+  top: 236px;
+  width: 20px;
+  height: 80px;
+
+  border: 2px solid grey;
+  animation: right-leg-jump 4s infinite;
+  transform: scale(1);
+
+}
+@keyframes right-leg-jump {
+  0% {top: 236px;
+    }
+  25% {top:226px;}
+
+  50% {top:236px;}
+
+
+}
+.robot-name{
+  width:100%;
+  top: 320px;
+  position: absolute;
+  text-align: center;
+  
+}
+.robot-name > h1 {
+  color:grey;
+}
+.create-robot-section{
+  width:100%;
+  height:570px;
+  background-color:   #bfd9bf;
+  border: 2px solid grey;
+  margin: 3% 0px 3% 0px;
+}
+.create-robot{
+  width: calc(100% - 20px);
+  text-align: center;
+  padding:10px;
+  
+}
+.create-robot > h {
+  font-family: sans-serif;
+  font-size:24px;
+  
+}
+.robot-form{
+  width: 100%;
+  border-top:2px solid grey;
+  border-bottom:2px solid grey;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.robot-form > div{
+  margin:3%;
+}
+
+.form-name{
+  width:19%;
+}
+.robot-form div > label {
+  margin:5px 0px 5px 0px;
+  display:inline-block;
+}
+
+.form-name > input{
+ width:calc(100% - 14px);
+ padding:5px;
+ height:20px;
+ border-radius: 5px;
+ border:2px solid grey;
+ color:grey;
+
+}
+
+.form-select-type{
+  width:19%;
+}
+.form-select-type > select {
+  width:100%;
+  height:34px;
+  border-radius: 5px;
+  border:2px solid grey;
+  color:grey;
+}
+
+.form-select-color{
+  width:8%
+}
+.form-select-color > input {
+  width:100%;
+  height:34px;
+  border-radius: 5px;
+  border:2px solid grey;
+
+}
+.form-select-options{
+  width:12%;
+}
+
+.form-select-options > input{
+  width:20px;
+  height:20px;
+  border:2px solid grey;
+  border-radius: 10px;
+  margin:0px 5px 0px 0px;
+  outline:0;
+ 
+
+}
+
+.form-write-comments{
+  width:12%;
+}
+.form-write-comments > textarea{
+  width:calc(100% - 8px);
+  border:2px solid grey;
+  border-radius: 5px;
+  resize: none;
+}
+.form-submit-button {
+  width:10%;
+}
+.form-submit-button > input{
+  width:100%;
+  height:34px;
+  border-radius: 5px;
+  border:2px solid grey;
+
+  
+}
+.form-show-create-robot-button{
+  width:20%;
+  margin: 3% 3% 3% 0px;
+}
+.form-show-create-robot-button > button{
+  width: 100%;
+  height:34px;
+  border-radius: 5px;
+  border:2px solid grey;
+
+
+ 
+}
+#id-form-show-create-robot-button{
+  margin: 3% 3% 3% 0px;
+}
+
+
