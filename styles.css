@@ -38,7 +38,7 @@ button {
 }
 
 .basic-robot-header{
-  width:calc(3% + 384px);
+  width:calc(20vw + 3%);
   height:50px;
   border-bottom:2px solid grey;
   display: flex;
@@ -55,11 +55,11 @@ button {
   
 }
 .top-line{
-width:calc(97% - 382px);
+width:30vw;
 height:25px;
 border-left:2px solid grey;
 transform: skewX(-45deg);
-margin-left: -20px;
+margin-left: -12px;
 
 }
 .bottom-line{
@@ -67,7 +67,7 @@ margin-left: -20px;
   height:25px;
   border-left:2px solid grey;
   transform: skewX(+45deg);
-  margin-left: -20px;
+  margin-left: -12px;
 }
 
 .content-wrapper{
