@@ -4,7 +4,7 @@
 }
 body{
   margin: auto;
-  width:1000px;
+  width:50vw;
 }
 header{
  display:flex;
@@ -17,6 +17,12 @@ header > h1 {
 header > img{
   width:auto;
   height:80px;
+}
+button {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
 }
 #slide-1{
   width:100%;
@@ -73,14 +79,7 @@ margin-left: -20px;
  
 
 }
-.robot{
-  width:380px;
-  height:380px;
-  border: 2px solid grey;
-  background-color: white;
-  margin:50px 3% 50px 3%;
-  position:relative;
-}
+
 .div-paragraph{
   
   /* max-width:calc(100% - 524px); */
@@ -91,17 +90,19 @@ margin-left: -20px;
 }
 .div-paragraph > p {
  margin:10px;
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
 
 #div-paragraph-one{
  margin: 50px 3% 10px 3%;
- width:calc(88% - 388px);
+ width:calc((30vw - 12%) - 8px);
  height:160px;
  text-align: left;
 }
 #div-paragraph-two{
   margin: 0px 6% 10px 3%;
-  width:calc(85% - 388px);
+  width:calc((30vw - 15%) - 8px);
   height:120px;
   text-align: justify;
 }
@@ -110,7 +111,7 @@ margin-left: -20px;
 }
 #div-paragraph-three{
   margin: 0px 9% 50px 3%;
-  width:calc(82% - 388px);
+  width:calc((30vw - 18%) - 8px);
   height:72px;
   text-align: left;
   display:flex;
@@ -195,9 +196,17 @@ margin-left: -20px;
   100% {opacity:1;}
 
 }
+.robot{
+  width:20vw;
+  height:100vh;
+  border: 2px solid grey;
+  background-color: white;
+  margin:50px 3% 50px 3%;
+  position:relative;
+}
 .robot-head{
   position: absolute;
-  left: 158px;
+  left:calc( 10vw - 32px);
   top: 20px;
   width: 60px;
   height: 60px;
@@ -283,7 +292,7 @@ margin-left: -20px;
 }
 .robot-left-hand{
   position: absolute;
-  left: 90px;
+  left:calc( 10vw - 99px);
   top: 86px;
   width: 20px;
   height: 120px;
@@ -305,7 +314,7 @@ margin-left: -20px;
 
 .robot-body {
   position: absolute;
-  left: 115px;
+  left:calc( 10vw - 75px);
   top: 86px;
   border-top: 150px solid #ff8000;
   border-left: 25px solid transparent;
@@ -326,7 +335,7 @@ margin-left: -20px;
 }
 .robot-right-hand{
   position: absolute;
-  left: 266px;
+  left:calc( 10vw + 75px);
   top: 86px;
   width: 20px;
   height: 120px;
@@ -347,7 +356,7 @@ margin-left: -20px;
 }
 .robot-left-leg{
   position: absolute;
-  left: 140px;
+  left:calc( 10vw - 50px);
   top: 236px;
   width: 20px;
   height: 80px;
@@ -368,7 +377,7 @@ margin-left: -20px;
 }
 .robot-right-leg{
   position: absolute;
-  left: 216px;
+  left:calc( 10vw + 26px);
   top: 236px;
   width: 20px;
   height: 80px;
