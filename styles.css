@@ -214,7 +214,7 @@ margin-left: -12px;
   -moz-border-radius: 30px;
   border-radius: 30px;
   border: 2px solid grey;
-  animation: head-jump 4s infinite;
+  /* animation: head-jump 4s infinite; */
   transform: scale(1);
  
 }
@@ -248,7 +248,7 @@ margin-left: -12px;
   -moz-border-radius: 10px;
   border-radius: 50%;
   border: 2px solid grey;
-  animation: blink 4s infinite;
+  /* animation: blink 4s infinite; */
   transform: scale(1);
 }
 @keyframes blink {
@@ -270,12 +270,12 @@ margin-left: -12px;
   -moz-border-radius: 20px;
   border-radius: 50%;
   border: 2px solid grey;
-  animation-name: speak;
+
   /* animation-iteration-count: infinite;
   -webkit-animation-iteration-count: infinite; */
   /* animation-duration: 1s;
   -webkit-animation-duration: 1s; */
-  animation: speak 4s infinite;
+  /* animation: speak 2s 5; */
   transform: scale(1);
 
  
@@ -299,7 +299,7 @@ margin-left: -12px;
 
   border: 2px solid grey;
   border-radius: 5px;
-  animation: left-hand-jump 4s infinite;
+  /* animation: left-hand-jump 4s infinite; */
   transform: scale(1);
 }
 @keyframes left-hand-jump {
@@ -319,9 +319,10 @@ margin-left: -12px;
   border-top: 150px solid #ff8000;
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
+  
   height: 0;
   width: 100px;
-  animation: body-jump 4s infinite;
+  /* animation: body-jump 4s infinite; */
   transform: scale(1);
 }
 @keyframes body-jump {
@@ -342,7 +343,7 @@ margin-left: -12px;
 
   border: 2px solid grey;
   border-radius: 5px;
-  animation: right-hand-jump 4s infinite;
+  /* animation: right-hand-jump 4s infinite; */
   transform: scale(1);
 }
 @keyframes right-hand-jump {
@@ -362,7 +363,7 @@ margin-left: -12px;
   height: 80px;
 
   border: 2px solid grey;
-  animation: left-leg-jump 4s infinite;
+  /* animation: left-leg-jump 4s infinite; */
   transform: scale(1);
 
 }
@@ -383,7 +384,7 @@ margin-left: -12px;
   height: 80px;
 
   border: 2px solid grey;
-  animation: right-leg-jump 4s infinite;
+  /* animation: right-leg-jump 4s infinite; */
   transform: scale(1);
 
 }
@@ -395,6 +396,19 @@ margin-left: -12px;
   50% {top:236px;}
 
 
+}
+.bubble {
+  padding:1vw;
+	top: -4vw;
+  left:14vw;
+  z-index: 100;
+	position: absolute;
+	min-width: 8vw;
+  min-height: 4vw;
+	border: 2px solid grey;
+	border-radius: 30px;
+	background-color: #FFF;
+  text-align: center;
 }
 .robot-name{
   width:100%;
@@ -503,7 +517,7 @@ margin-left: -12px;
 .form-submit-button {
   width:10%;
 }
-.form-submit-button > input{
+.form-submit-button > button{
   width:100%;
   height:34px;
   border-radius: 5px;

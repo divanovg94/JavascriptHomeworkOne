@@ -21,19 +21,20 @@
         <div class="bottom-line"></div>
     </div>
     <div class="content-wrapper">
-        <div class="robot">
-            <div class="robot-head">
+        <div class="robot" id="id-robot" style="visibility: hidden;">
+            <div class="bubble" id="bubble-id" style="visibility: hidden;" ><p id="p-bubble">..................</p></div>
+            <div class="robot-head" id="id-robot-head">
                 <div class="left-eye"></div>
-                <div class="right-eye"></div>
-                <div class="mouth"></div>
+                <div class="right-eye" id="id-right-eye"></div>
+                <div class="mouth" id="id-mouth"></div>
             </div>
-            <div class="robot-left-hand"></div>
-            <div class="robot-body"></div>
-            <div class="robot-right-hand"></div>
-            <div class="robot-left-leg"></div>
-            <div class="robot-right-leg"></div>
-            
-            <div class="robot-name"><h1>Robot name</h1></div>
+            <div class="robot-left-hand" id="id-robot-left-hand"></div>
+            <div class="robot-body" id="robot-body"></div>
+            <div class="robot-right-hand" id="id-robot-right-hand"></div>
+            <div class="robot-left-leg" id="robot-left-leg"></div>
+            <div class="robot-right-leg" id="robot-right-leg"></div>
+
+            <div class="robot-name" id="robot-name"><h1>Robot name</h1></div>
 
         </div>
         <div class="div-paragraph" id="div-paragraph-one"><p class="paragraph" id="paragraph-one" ><b>P</b>aragraph text here. Text-align on left 3% space from right border.Text is only 2 lines and ends with three dots...<span class="tooltip">because it too long. On hover full text is shown as tooltip.First letter is bold.</span></p></div>
@@ -53,13 +54,15 @@
                 </div>  
                 <div class="form-select-type">
                     <label for="cars">Select type</label><br>
-                    <select name="cars" id="cars" form="robot">
-                    <option value="volvo">Basic Robot</option>
+                    <select name="cars" id="select-type" form="robot">
+                    <option value="default">default</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                     </select>
                 </div>
                 <div class="form-select-color">
                     <label for="head">Select Color</label><br>
-                    <input type="color" id="head" name="head"
+                    <input type="color" id="color" name="head"
                         value="#ff8000">
                 
                 </div>
@@ -68,7 +71,7 @@
                 
                     <input type="checkbox" class="checkbox" id="can-jump" name="robot-options" value="can-jump">
                       <label for="can-jump">can jump</label>
-                      <input type="checkbox"  class="checkbox" id="can-talk" name="robot-options" value="can-talk">
+                      <input type="checkbox"  class="checkbox" id="can-talk" name="robot-options" value="can-talk" onclick="CommentShow()">
                       <label for="can-talk">can talk</label>
                       <input type="checkbox"  class="checkbox" id="can-blink" name="robot-options" value="can-blink">
                       <label for="can-blink">can blink</label>
@@ -76,13 +79,13 @@
                 
                 <div class="form-write-comments">
                     <label for="head">Write Comments</label>
-                    <textarea rows="4"  name="comment" ></textarea>
+                    <textarea rows="4"  name="comment" id="id-robot-comment" style="visibility: hidden;"></textarea>
                 </div>
                 <div class="form-submit-button">
-                    <input  type="submit" value="Create"> 
+                    <button  type="submit" value="Create" id="create-button">Create </button>
                 </div>
                 <div class="form-show-create-robot-button" id="id-form-show-create-robot-button">
-                    <button  type="button">Show Created Robot</button>
+                    <button  type="button" id="show-button">Show Created Robot</button>
                 </div>
                 
             </div>
